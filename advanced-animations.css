@@ -1,0 +1,161 @@
+/* Modern Color Palette */
+:root {
+    --gradient-1: linear-gradient(45deg, #FF3366, #FF6B6B);
+    --gradient-2: linear-gradient(45deg, #4834D4, #686DE0);
+    --gradient-3: linear-gradient(45deg, #20bf55, #01baef);
+    --accent-1: #FF3366;
+    --accent-2: #4834D4;
+    --accent-3: #20bf55;
+    --glow: rgba(255, 51, 102, 0.3);
+  }
+  
+  /* Animated Background Gradient */
+  .gradient-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(45deg, 
+      #FF3366 0%, 
+      #4834D4 25%, 
+      #20bf55 50%, 
+      #4834D4 75%, 
+      #FF3366 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    opacity: 0.05;
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Hero Section Animation */
+  .hero-title {
+    position: relative;
+    display: inline-block;
+    font-size: 4rem;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: titleGlow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes titleGlow {
+    from {
+      text-shadow: 0 0 20px var(--glow);
+    }
+    to {
+      text-shadow: 0 0 40px var(--glow);
+    }
+  }
+  
+  /* Animated Skills Cards */
+  .skill-category {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .skill-category::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    transform: rotate(0deg);
+    animation: rotateShineBg 8s linear infinite;
+  }
+  
+  @keyframes rotateShineBg {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Project Cards with 3D Hover */
+  .project-card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  
+  .project-card:hover {
+    transform: rotateY(10deg) rotateX(5deg) translateZ(20px);
+  }
+  
+  .project-card::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: var(--gradient-2);
+    z-index: -1;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .project-card:hover::after {
+    opacity: 1;
+  }
+  
+  /* Floating Icons Animation */
+  .tech-icon {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .tech-icon:nth-child(2n) {
+    animation-delay: 0.5s;
+  }
+  
+  .tech-icon:nth-child(3n) {
+    animation-delay: 1s;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Interactive Contact Links */
+  .contact-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .contact-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  
+  .contact-item:hover::before {
+    opacity: 0.1;
+  }
+  
+  /* Scroll Progress Indicator */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gradient-1);
+    transform-origin: 0%;
+    z-index: 1001;
+  }
