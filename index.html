@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="light-mode">
-    <!-- Navbar -->
+   
     <nav id="navbar">
         <div class="nav-content">
             <div class="nav-logo">Robert Ponder</div>
@@ -35,7 +35,7 @@
         </div>
     </nav>
 
-    <!-- About Section -->
+   
     <section id="about" class="section">
         <div class="container">
             <div class="section-header">
@@ -71,66 +71,228 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+ 
     <section id="skills" class="section">
         <div class="container">
             <div class="section-header">
                 <h2>Technical Skills</h2>
                 <p>Technologies I've worked with</p>
             </div>
-
-            <div class="skills-categories">
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i data-lucide="code"></i>
-                        <h3>Programming Languages</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill">C#</div>
-                        <div class="skill">HTML</div>
-                        <div class="skill">CSS</div>
-                        <div class="skill">TypeScript</div>
-                        <div class="skill">JavaScript</div>
-                    </div>
+    
+            <div class="skills-tabs">
+                <div class="tabs-header">
+                    <button class="tab-button active" data-tab="programming">Programming</button>
+                    <button class="tab-button" data-tab="frameworks">Frameworks</button>
+                    <button class="tab-button" data-tab="backend">Backend</button>
+                    <button class="tab-button" data-tab="tools">Tools</button>
                 </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i data-lucide="globe"></i>
-                        <h3>Frameworks & Libraries</h3>
+    
+                <div class="tabs-content">
+                    <!-- Programming Tab -->
+                    <div class="tab-pane active" id="programming">
+                        <div class="skills-grid">
+                            <!-- C# -->
+                            <div class="skill-box" data-skill="csharp">
+                                <div class="skill-front">
+                                    <h3>C#</h3>
+                                </div>
+                                <div class="skill-back">
+                                    <p><strong>Project:</strong> T.I.M.E.</p>
+                                    <p><strong>Description:</strong> Developed backend services for Admin Portal time.</p>
+                                    <p><a href="https://github.com/ponderrr/time" target="_blank" class="github-link">GitHub Repository</a></p>
+                                </div>
+                            </div>
+    
+                            <!-- TypeScript -->
+                            <div class="skill-box" data-skill="typescript">
+                                <div class="skill-front">
+                                    <h3>TypeScript</h3>
+                                </div>
+                                <div class="skill-back">
+                                    <p><strong>Project:</strong> T.I.M.E.</p>
+                                    <p><strong>Description:</strong> Built frontend features with enhanced type safety.</p>
+                                    <p><a href="https://github.com/ponderrr/time" target="_blank" class="github-link">GitHub Repository</a></p>
+                                </div>
+                            </div>
+    
+                            <!-- JavaScript -->
+                            <div class="skill-box" data-skill="javascript">
+                                <div class="skill-front">
+                                    <h3>JavaScript</h3>
+                                </div>
+                                <div class="skill-back">
+                                    <p><strong>Project:</strong> Smart Advisor</p>
+                                    <p><strong>Description:</strong> Implemented frontend functionality for the movie and book recommendation system.</p>
+                                    <p><a href="https://github.com/ponderrr/smart-advisor" target="_blank" class="github-link">GitHub Repository</a></p>
+                                </div>
+                            </div>
+    
+                            <!-- HTML -->
+                            <div class="skill-box" data-skill="html">
+                                <div class="skill-front">
+                                    <h3>HTML</h3>
+                                </div>
+                                <div class="skill-back">
+                                    <p><strong>Project:</strong> Smart Advisor</p>
+                                    <p><strong>Description:</strong> Created structured markup and layouts for the web application.</p>
+                                    <p><a href="https://github.com/ponderrr/smart-advisor" target="_blank" class="github-link">GitHub Repository</a></p>
+                                </div>
+                            </div>
+    
+                            <!-- CSS -->
+                            <div class="skill-box" data-skill="css">
+                                <div class="skill-front">
+                                    <h3>CSS</h3>
+                                </div>
+                                <div class="skill-back">
+                                    <p><strong>Project:</strong> Smart Advisor</p>
+                                    <p><strong>Description:</strong> Designed and implemented responsive styling and animations for the web application.</p>
+                                    <p><a href="https://github.com/ponderrr/smart-advisor" target="_blank" class="github-link">GitHub Repository</a></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skills-list">
-                        <div class="skill">React</div>
-                        <div class="skill">.NET</div>
+    
+                    <!-- Frameworks Tab -->
+                    <div class="tab-pane" id="frameworks">
+                        <div class="skills-grid">
+                            <!-- React -->
+                            <div class="skill-box" data-skill="react">
+                                <div class="skill-front">
+                                    <h3>React</h3>
+                                </div>
+                                <div class="skill-back">
+                                    <p><strong>Project:</strong> T.I.M.E.</p>
+                                    <p><strong>Description:</strong> Developed frontend UI components and implemented state management.</p>
+                                    <p><a href="https://github.com/ponderrr/time" target="_blank" class="github-link">GitHub Repository</a></p>
+                                </div>
+                            </div>
+    
+                            <!-- .NET -->
+                            <div class="skill-box" data-skill="dotnet">
+                                <div class="skill-front">
+                                    <h3>.NET</h3>
+                                </div>
+                                <div class="skill-back">
+                                    <p><strong>Project:</strong> T.I.M.E.</p>
+                                    <p><strong>Description:</strong> Built backend API and services using the .NET framework.</p>
+                                    <p><a href="https://github.com/ponderrr/time" target="_blank" class="github-link">GitHub Repository</a></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i data-lucide="database"></i>
-                        <h3>Backend & Databases</h3>
+    
+                    <!-- Backend Tab -->
+                    <div class="tab-pane" id="backend">
+                        <div class="skills-grid">
+                            <!-- Firebase -->
+                            <div class="skill-box" data-skill="firebase">
+                                <div class="skill-front">
+                                    <h3>Firebase</h3>
+                                </div>
+                                <div class="skill-back">
+                                    <p><strong>Project:</strong> Smart Advisor</p>
+                                    <p><strong>Description:</strong> Implemented user authentication and real-time database features.</p>
+                                    <p><a href="https://github.com/ponderrr/smart-advisor" target="_blank" class="github-link">GitHub Repository</a></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skills-list">
-                        <div class="skill">Firebase</div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i data-lucide="wrench"></i>
-                        <h3>Tools & Technologies</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill">Git</div>
-                        <div class="skill">VS Code</div>
-                        <div class="skill">Unity</div>
+    
+                    <!-- Tools Tab -->
+                    <div class="tab-pane" id="tools">
+                        <div class="skills-grid">
+                            <!-- Git -->
+                            <div class="skill-box" data-skill="git">
+                                <div class="skill-front">
+                                    <h3>Git</h3>
+                                </div>
+                                <div class="skill-back">
+                                    <p><strong>Description:</strong> Managed version control and collaboration across all projects.</p>
+                                </div>
+                            </div>
+    
+                            <!-- Unity -->
+                            <div class="skill-box" data-skill="unity">
+                                <div class="skill-front">
+                                    <h3>Unity</h3>
+                                </div>
+                                <div class="skill-back">
+                                    <p><strong>Project:</strong> SELU Innovation Hub</p>
+                                    <p><strong>Description:</strong> Developed VR applications at SELU Innovation Hub using Unity.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
-    <!-- Contact Section -->
+<section id="projects" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Projects</h2>
+            <p>Featured Work</p>
+        </div>
+
+        <div class="project-grid">
+            <div class="project-card" data-project="smart-advisor">
+                <img src="images/smart-advisor/home-light.png" alt="Smart Advisor Preview">
+                <div class="card-content">
+                    <h3>Smart Advisor</h3>
+                    <p>AI-Powered Movie & Book Recommendations</p>
+                </div>
+                <div class="card-overlay">
+                    <span>View Project</span>
+                </div>
+            </div>
+          
+        </div>
+
+       
+        <div class="project-expanded" id="smart-advisor-content">
+               
+<section id="smart-advisor" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Smart Advisor Project</h2>
+            <p>AI-Powered Movie & Book Recommendations</p>
+        </div>
+
+        <div class="project-description">
+            <p>An intelligent recommendation system that personalizes movie and book suggestions based on user preferences and age. Users answer customized questions, and our AI-powered system provides tailored recommendations while ensuring age-appropriate content.</p>
+        </div>
+
+        <div class="showcase-slider">
+            <div class="slider-wrapper">
+                <div class="slider-track">
+                    
+                </div>
+                
+                <button class="slider-nav prev">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+                <button class="slider-nav next">
+                    <i data-lucide="chevron-right"></i>
+                </button>
+            </div>
+            
+            <div class="slide-info">
+                <h3 class="slide-title"></h3>
+                <p class="slide-description"></p>
+            </div>
+            
+            <div class="slide-dots"></div>
+        </div>
+    </div>
+</section>
+        </div>
+    </div>
+</section>
+
+ 
     <section id="contact" class="section">
         <div class="container">
             <div class="section-header">
@@ -160,4 +322,4 @@
 
     <script src="main.js"></script>
 </body>
-</html>
+</html> 
